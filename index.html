@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="clock.css">
+
+      <title>Clock</title>
+</head>
+
+<body>
+      <!-- ---- Navigation Bar ---- -->
+
+      <header>
+            <nav>
+                  <div id="menu">
+                        <img id="logo" src="icons/logo.png" alt="">
+                        <a href="#home" class="navbar">Home</a>
+                        <a href="#stopwatch" class="navbar">Stopwatch</a>
+                        <a href="#clock" class="navbar">Clock</a>
+                        <a href="#timer" class="navbar">Timer</a>
+                        <a href="#alarm" class="navbar">Alarm</a>
+                  </div>
+            </nav>
+      </header>
+
+      <!-- ---- Home ---- -->
+
+      <div id="home">
+            <h1 id="hHeading" class="home">
+                  Multifunction Clock
+            </h1>
+            <p>A classic multi-function digital clock. </p>
+            <p>You can watch time, can use stopwatch to measure the time interval of any of your task.</p>
+            <p>It also has timer that you can use to set the time interval for any of your activity so that you can
+                  complete it on time.</p>
+            <p>Last but not least, checkout the alarm also it is so much exciting.</p>
+      </div>
+
+      <!-- ---- stopwatch ---- -->
+
+      <div id="stopwatch">
+            <div class="stopwatch" id="heading">
+                  <div class="stopwatch"><img id="stopIcon" class="icon" src="icons/stopwatch.png" alt="error"></div>
+                  <h3>Stopwatch</h3>
+            </div>
+            <div id="sw" class="stopwatch">
+                  <span id="stopwatchHour">00 :&nbsp;</span>
+                  <span id="stopwatchMinute">00 :&nbsp;</span>
+                  <span id="stopwatchSecond">00</span>
+            </div>
+            <span id="centiSecond">00</span>
+            <div class="stopwatch">
+                  <button id="reset">Reset</button>
+                  <button id="start">Start</button>
+            </div>
+      </div>
+
+      <!-- ---- clock ---- -->
+
+      <div id="clock">
+            <div class="clock" id="cHeading">
+                  <div class="clock"><img id="clockIcon" class="icon" src="icons/clock.png" alt="error"></div>
+                  <h3>Clock</h3>
+            </div>
+            <div id="hm" class="clock">
+                  <span id="hourMinute">00 : 00</span>
+                  <span id="second">00</span>
+            </div>
+            <!-- <div id="start" class="stopwatch"><button>Start</button></div> -->
+      </div>
+
+      <!-- ---- timer ---- -->
+
+      <div id="timer">
+            <div class="timer" id="tHeading">
+                  <div class="timer"><img id="timerIcon" class="icon" src="icons/timer.png" alt="error"></div>
+                  <h3>Timer</h3>
+            </div>
+            <div id="tm" class="timer">
+                  <span id="timerHour">00 :&nbsp;</span>
+                  <span id="timerMinute">00 :&nbsp;</span>
+                  <span id="timerSecond">00</span>
+            </div>
+            <div class="timer">
+                  <button id="timerReset">Reset</button>
+                  <button id="setTimer">Set Timer</button>
+                  <button id="timerStart">Start</button>
+            </div>
+            <div id="setTimebtn">
+                  <input id="timerTime" class="setTimerTime" type="time" step="2">
+                  <button id="setBtn" class="setTimerTime">Set</button>
+            </div>
+      </div>
+
+      <!-- ---- Alarm ---- -->
+
+      <div id="alarm">
+            <div id="alarm-heading">
+                  <img src="./icons/alarm.png" alt="" id="alarm-icon">
+                  <h3>Alarm</h3>
+            </div>
+            <div id="alm">
+                  <input type="range" name="on-off" id="on-off" min="0" max="1" value="0">
+                  <input id="alarm-hour" type="number" min="0" max="12"><strong>&nbsp;:</strong>
+                  <input id="alarm-minute" type="number" min="0" max="59">
+                  <select name="time-period" id="time-period">
+                        <option value="am">AM</option>
+                        <option value="pm">PM</option>
+                  </select>
+                  <input type="text" id="label" name="label" placeholder="Label">
+            </div>
+            <div class="alarm">
+                  <button id="snooze">Snooze</button>
+                  <button id="off">Off</button>
+            </div>
+      </div>
+      <footer>
+            <!-- follow me on insta - https://www.instagram.com/its_kishan_singh/  -->
+            <h4>Follow me on</h4>
+            <div class="social-platforms">
+                  <a href="https://www.instagram.com/its_kishan_singh/" target="blank"><img src="./icons/instagram.png" alt="Instagram"></a>
+                  <a href="https://www.linkedin.com/in/kishan-k/" target="blank"><img src="./icons/linkedin.png" alt="LinkedIn"></a>
+                  <a href="https://github.com/Kishan-kr" target="blank"><img src="./icons/github.png" alt="Github"></a>
+            </div>
+            <p>created by Kishan Kumar</p>
+      </footer>
+
+</body>
+<script src="clock.js"></script>
+
+</html>
