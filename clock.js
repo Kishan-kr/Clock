@@ -1,4 +1,35 @@
-      // ---- Stopwatch ----
+// ----navigation ---
+let tabButton = document.getElementById('tab-button');
+let minusSymbol = document.getElementsByClassName('minus-symbol');
+let navPanel = document.getElementById('small-device-menu');
+let isNavPanelOpen = false;
+
+tabButton.onclick = toggleNavPanel;
+function toggleNavPanel() {
+      if(!isNavPanelOpen) {
+            tabButton.classList.add('close-tab');
+            tabButton.classList.remove('open-tab');
+            minusSymbol[0].style.display = 'none';
+            navPanel.style.display = 'flex';
+            isNavPanelOpen = true;
+      }
+      else {
+            tabButton.classList.add('open-tab');
+            tabButton.classList.remove('close-tab');
+            minusSymbol[0].style.display = 'block';
+            navPanel.style.display = 'none';
+            isNavPanelOpen = false;
+      }
+}
+
+for(item of document.querySelectorAll('#small-device-menu a')) {
+      item.onclick = () => {
+            isNavPanelOpen = true;
+            setTimeout(toggleNavPanel, 300);
+      }
+}
+    
+// ---- Stopwatch ----
 
 let stopCenti = 0;
 
