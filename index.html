@@ -24,6 +24,15 @@
                         <a href="#timer" class="navbar">Timer</a>
                         <a href="#alarm" class="navbar">Alarm</a>
                   </div>
+                  <div id="tab-button" class="open-tab">&times;<div class="minus-symbol"></div></div>
+                  <div id="small-device-menu">  
+                        <a href="#home" class="navbar" id="home-button">Home</a>
+                        <a href="#stopwatch" class="navbar">Stopwatch</a>
+                        <a href="#clock" class="navbar">Clock</a>
+                        <a href="#timer" class="navbar">Timer</a>
+                        <a href="#alarm" class="navbar">Alarm</a>
+
+                  </div>
             </nav>
       </header>
 
@@ -36,8 +45,8 @@
             <p>A classic multi-function digital clock. </p>
             <p>You can watch time, can use stopwatch to measure the time interval of any of your task.</p>
             <p>It also has timer that you can use to set the time interval for any of your activity so that you can
-                  complete it on time.</p>
-            <p>Last but not least, checkout the alarm also it is so much exciting.</p>
+                  complete it on time. Last but not least, checkout the alarm also it is so much exciting.</p>
+            <p></p>
       </div>
 
       <!-- ---- stopwatch ---- -->
@@ -84,15 +93,15 @@
                   <span id="timerHour">00 :&nbsp;</span>
                   <span id="timerMinute">00 :&nbsp;</span>
                   <span id="timerSecond">00</span>
-            </div>
-            <div class="timer">
-                  <button id="timerReset">Reset</button>
                   <button id="setTimer">Set Timer</button>
-                  <button id="timerStart">Start</button>
+                  <div id="setTimebtn">
+                        <input id="timerTime" class="setTimerTime" type="time" step="2">
+                        <button id="setBtn" class="setTimerTime">Set</button>
+                  </div>
             </div>
-            <div id="setTimebtn">
-                  <input id="timerTime" class="setTimerTime" type="time" step="2">
-                  <button id="setBtn" class="setTimerTime">Set</button>
+            <div class="timer-button">
+                  <button id="timerReset">Reset</button>
+                  <button id="timerStart">Start</button>
             </div>
       </div>
 
@@ -100,7 +109,7 @@
 
       <div id="alarm">
             <div id="alarm-heading">
-                  <img src="./icons/alarm.png" alt="" id="alarm-icon">
+                  <img src="./icons/alarm.png" alt="" id="alarm-icon" class="icon">
                   <h3>Alarm</h3>
             </div>
             <div id="alm">
@@ -122,8 +131,10 @@
             <!-- follow me on insta - https://www.instagram.com/its_kishan_singh/  -->
             <h4>Follow me on</h4>
             <div class="social-platforms">
-                  <a href="https://www.instagram.com/its_kishan_singh/" target="blank"><img src="./icons/instagram.png" alt="Instagram"></a>
-                  <a href="https://www.linkedin.com/in/kishan-k/" target="blank"><img src="./icons/linkedin.png" alt="LinkedIn"></a>
+                  <a href="https://www.instagram.com/its_kishan_singh/" target="blank"><img src="./icons/instagram.png"
+                              alt="Instagram"></a>
+                  <a href="https://www.linkedin.com/in/kishan-k/" target="blank"><img src="./icons/linkedin.png"
+                              alt="LinkedIn"></a>
                   <a href="https://github.com/Kishan-kr" target="blank"><img src="./icons/github.png" alt="Github"></a>
             </div>
             <p>created by Kishan Kumar</p>
