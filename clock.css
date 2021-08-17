@@ -5,13 +5,10 @@
       box-sizing: border-box;
 }
 
-html{
-      scroll-behavior: smooth;
-}
+html{scroll-behavior: smooth;}
 
-button {
-      border: none;
-}
+button {border: none;}
+
 nav {
       display: flex;
       width: 100%;
@@ -47,28 +44,76 @@ a.navbar:hover {
       border-radius: 16px;
 }
 
-      /* home */
+#tab-button {
+      position: absolute;
+      right: 20px;
+      display: none;
+}
+
+nav .open-tab {
+      width: 25px;
+      height: 15px;
+      top: 43%;
+      color: transparent;
+      border-top: 3px solid whitesmoke;
+      border-bottom: 3px solid whitesmoke;
+}
+
+nav .close-tab {
+      top: 15%;
+      padding: 0;
+      color: whitesmoke;
+      border: none;
+      font-size: 2.8rem;
+}
+
+nav .minus-symbol {
+      border-top: 3px solid whitesmoke;
+      position: relative;
+      top: -16px;
+}
+
+nav #small-device-menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      background-color: #8e3447;
+      z-index: -1;
+      display: none;
+}
+
+nav #small-device-menu a {
+      margin: 1.4rem 1rem;
+      width: fit-content;
+}
+
+nav #small-device-menu #home-button {
+      margin-top: 30px;
+}
+
+/*---- home ----*/
 
 div#home {
       display: flex;
-      align-items: center;
-      justify-content: center;
       flex-direction: column;
       width: 100%;      
-      height: 700px;
       background-color: #d2d9d5;
 }
 div#home h1 {
-      font-size: 5rem;
-      margin-top: 2rem;
       margin-bottom: 1rem;
       text-shadow: 0px 4px 8px #3f3c3c;
 }
 div#home p {
-      font-size: 1.7rem;
       margin: 0.5rem;
       color: #1b3a37;
+      text-align: left;
 }
+
+#home p:last-child {margin-bottom: 100px;}
 
 /* stopwatch */
 
@@ -95,37 +140,28 @@ div#stopwatch #heading {
 }
 
 #stopIcon {
-    width: 90px;
-    height: 90px;
     position: absolute;
-    left: -50px;
-    top: 10px;
+    left: -20%;
+    bottom: 5px;
 }
 
 #stopwatch h3 {
-      font-size: 2rem;
       color: whitesmoke;
       background-color: rgb(233, 150, 48);
-      width: 300px;
       text-align: center;
-      padding: .6rem;
+      padding: .6rem 2rem .6rem 2.5rem;
 }
 
 div button#start, div button#reset {
       background-color: #BDD6D2;
-      height: 38px;
-      width: 140px;
       border-radius: 30px;
-      padding: 0.2rem 0.5rem;
-      font-size: 1.2rem;
+      padding: 0.2rem 0.4rem;
       font-weight: bold;
       cursor: pointer;
-      margin: 0rem 0.5rem;
 }
 
 div button#reset {
       background-color: #FEEEAF;
-      /* margin-right: 1rem; */
 }
 div button#start:hover, div button#reset:hover {
       /* background-color: rgb(176, 197, 176); */
@@ -179,20 +215,16 @@ div#clock div#cHeading {
 }
 
 #clockIcon {
-      width: 85px;
-      height: 85px;
       position: absolute;
-      left: -50px;
-      top: 20px;
+      left: -28%;
+      bottom: 0px;
 }
 
 #clock h3 {
-      font-size: 2rem;
       color: whitesmoke;
       background-color: rgb(37 56 56 / 88%);
-      width: 250px;
       text-align: center;
-      padding: .5rem;
+      padding: .5rem 2rem .5rem 2.5rem;
 }
 div#clock div#hm {
       display: flex;
@@ -219,36 +251,31 @@ div#timer {
       flex-direction: column;
       position: relative;
       width: 100%;
-      height: 620px;
+      height: 650px;
       background-color: #304D4A;
 }
-
-
 
 .timer {
       margin: 0.4rem;
       padding: 0.5rem;
 }
+
 div#timer div#tHeading {
       position: relative;
       margin: 2.2rem 0px;
 }
 
 #timerIcon {
-      width: 85px;
-      height: 80px;
       position: absolute;
-      left: -50px;
-      top: 15px;
+      left: -25%;
+      bottom: 5px;
 }
 
 #timer h3 {
-      font-size: 2rem;
       color: whitesmoke;
       background-color: #1b3a37;
-      width: 300px;
       text-align: center;
-      padding: .5rem;
+      padding: .5rem 2rem .5rem 2.5rem;
 }
 div#timer div#tm {
       display: flex;
@@ -262,6 +289,7 @@ div#timer div#tm {
       font-size: 3rem;
       text-align: center;
       box-shadow: 0px 6px 25px 0px #213332;
+      position: relative;
 }
 span#timerHour { display: none;}
 
@@ -274,14 +302,20 @@ div button#timerStart, div button#timerReset, div button#setTimer {
       font-size: 1.2rem;
       font-weight: bold;
       cursor: pointer;
-      margin: 1.4rem 0.5rem;
+      margin: 2rem 0.5rem;
+}
+
+div button#setTimer {
+      position: absolute;
+      bottom: 5px;
+      height: 35px;
+      width: 110px;
+      font-size: 1.05rem;
+      background-color:#9e9e9b87;
 }
 
 div button#timerReset {
       background-color: #FEEEAF;
-}
-div button#setTimer {
-      background-color: azure;
 }
 div button#timerStart:hover, div button#timerReset:hover, div button#setTimer:hover, button#setBtn:hover {
       /* background-color: rgb(176, 197, 176); */
@@ -292,7 +326,8 @@ div#setTimebtn {
       display: flex;
       flex-direction: row;
       position: absolute;
-      top: 509px;
+      bottom: 28px;
+      left: 94px;
       height: 38px;
       width: 140px;
 }
@@ -338,24 +373,19 @@ div#alarm #alarm-heading {
 }
 
 #alarm-icon {
-    width: 80px;
-    height: 80px;
     position: absolute;
     left: -50px;
     bottom: -10px;
 }
 
 #alarm h3 {
-      font-size: 2rem;
       color: whitesmoke;
       background-color: rgb(233, 150, 48);
-      width: 300px;
       text-align: center;
-      padding: .6rem;
+      padding: .6rem 2rem .6rem 2.5rem;
 }
 
 #alarm #alm {
-      width: 360px;
       height: 260px;
       background-color: #D2D9D5;
       padding: 2rem;
@@ -385,7 +415,7 @@ div#alarm #alarm-heading {
       height: 12px;
       border-radius: 8px;
       appearance: none;
-      background-color: #a0b0a9;/*//#0ea25d*/
+      background-color: #a0b0a9;
 }
 
 #alarm input[type='range']::-webkit-slider-thumb {
@@ -467,4 +497,67 @@ footer p {
       color: rgb(80, 80, 80);
       text-align: center;
       margin-top: 3.5rem;
+}
+
+/* ---- resposive ----  */
+
+@media screen and (min-width:761px) {
+      #home h1 {font-size: 5rem; padding: .5rem 1.4rem; margin-top: 100px;}
+      #home p {font-size: 1.7rem; padding: .5rem 1.4rem;}
+      #home {align-items: center;}
+      h3 {font-size: 2rem;}
+      .icon {width: 90px; height: 90px;}
+      #alm {width: 360px;}
+      div button#start, div button#reset {
+            width: 140px;
+            height: 37px;
+            margin: 0px 0.5rem;
+            font-size: 1.2rem;
+      }
+}
+
+@media screen and (max-width:760px) {
+      #tab-button {display: block;}
+      #tab-button::before {visibility: visible;}
+      #menu a {display: none;}
+      #home h1 {font-size: 3rem; padding: .4rem 1rem; margin-top: 100px;}
+      #home p {font-size: 1.2rem; padding: .4rem 1rem;}
+      #home {align-items: flex-start;}
+      h3 {font-size: 2rem;}
+      .icon {width: 80px; height: 80px;}
+      #alm {width: 360px;}
+      div button#start, div button#reset {
+            width: 135px;
+            height: 37px;
+            margin: 0px 0.4rem;
+            font-size: 1.2rem;
+      }
+}
+
+@media screen and (max-width:450px) {
+      h3 {font-size: 1.4rem;}
+      .icon {width: 60px; height: 60px;}
+      #alm {width: 340px;}
+      div button#start, div button#reset {
+            width: 130px;
+            height: 36px;
+            margin: 0px 0.4rem;
+            font-size: 1.1rem;
+      }
+}
+
+@media screen and (max-width:360px) {
+      #alm {width: 320px;}
+#home h1 {padding: .5rem .6rem;}
+      div button#start, div button#reset {
+            width: 110px;
+            height: 35px;
+            margin: 0px 0.3rem;
+            font-size: 1.1rem;
+      }
+}
+
+@media screen and (max-width:320px) {
+      #alm {width: 300px;}
+
 }
